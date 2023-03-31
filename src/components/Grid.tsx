@@ -8,7 +8,6 @@ import 'ag-grid-community/styles/ag-grid.css' // Core grid CSS, always needed
 import 'ag-grid-community/styles/ag-theme-alpine.css' // Optional theme CSS
 import '@/styles/Grid.css'
 
-
 // Row Data interface
 interface ICar {
   make: string
@@ -68,9 +67,15 @@ const Grid = () => {
 
   console.log(rowData)
 
-  const rowClass = ['text-white', 'bg-[#10172a]'];
-  
-
+  const rowClass = [
+    'bg-white',
+    'text-slate-700',
+    'dark:text-slate-300',
+    'dark:bg-slate-900',
+    'border-slate-300',
+    'dark:border-slate-700',
+    'backdrop-blur-sm/75',
+  ]
 
   return (
     <div>
@@ -78,7 +83,10 @@ const Grid = () => {
       <button onClick={buttonListener}>Push Me</button>
 
       {/* On div wrapping Grid a) specify theme CSS Class Class and b) sets Grid size */}
-      <div className='flex-1 ag-theme-alpine' style={{ width: 500, height: 500 }}>
+      <div
+        className='flex-1 ag-theme-alpine'
+        style={{ width: 500, height: 500 }}
+      >
         <AgGridReact<ICar>
           ref={gridRef} // Ref for accessing Grid's API
           rowData={rowData} // Row Data for Rows

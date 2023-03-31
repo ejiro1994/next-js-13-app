@@ -14,12 +14,13 @@ export default function RootLayout({
   return (
     <html lang='en' className={cn('bg-white text-slate-900 antialiased')}>
       <body className='min-h-screen antialiased bg-slate-50 dark:bg-slate-900'>
-        <Providers>{children}</Providers>
+        <Providers>
         
         {/* @ts-expect-error Server Component */}
         <Navbar />
 
-        
+        <main>{children}</main>
+        </Providers>
         {/* Allow for more height on mobile devices */}
         <div className='h-40 md:hidden'/>
       </body>

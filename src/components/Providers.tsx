@@ -1,6 +1,5 @@
 'use client'
 
-import { SessionProvider } from 'next-auth/react'
 import { ThemeProvider } from 'next-themes'
 
 type ProvidersProps = {
@@ -10,7 +9,7 @@ type ProvidersProps = {
 const Providers: React.FC<ProvidersProps> = ({ children }) => {
   return (
     <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-      <SessionProvider>{children}</SessionProvider>
+      {children}
     </ThemeProvider>
   )
 }

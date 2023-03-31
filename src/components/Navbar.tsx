@@ -1,9 +1,9 @@
 import { getServerSession } from 'next-auth'
 import Link from 'next/link'
 import SignInButton from '@/components/SignInButton'
-import { buttonVariants } from '@/ui/Button'
+import { buttonVariants } from '@/components/ui/Button'
 import SignOutButton from '@/components/SignOutButton'
-import ThemeToggle from './ThemeToggle'
+import { ThemeToggle } from './ThemeToggle'
 
 const Navbar = async ({}) => {
   const session = await getServerSession()

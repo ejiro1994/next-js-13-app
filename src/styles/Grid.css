@@ -2,6 +2,12 @@
   /* disable all borders */
   --ag-borders: none;
   /* then add back a border between rows */
-  --ag-row-border-width: .5px;
+  --ag-row-border-width: 0.5px;
   --ag-row-border-color: rgba(255, 255, 255, 0.2);
+
+  --ag-header-height: 30px;
+  --ag-header-foreground-color: white;
+  --ag-header-background-color: black;
+  --ag-header-cell-hover-background-color: rgb(80, 40, 140);
+  --ag-header-cell-moving-background-color: rgb(80, 40, 140);
 }
